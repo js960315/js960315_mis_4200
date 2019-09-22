@@ -1,0 +1,45 @@
+﻿@model IEnumerable<js960315_MIS4200.Models.Director>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.directorFirst)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.directorLast)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hireDate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.directorFirst)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.directorLast)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hireDate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.directorId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.directorId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.directorId })
+        </td>
+    </tr>
+}
+
+</table>

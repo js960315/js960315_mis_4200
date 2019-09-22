@@ -1,0 +1,42 @@
+﻿@model js960315_MIS4200.Models.Director
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Director</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.directorFirst)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.directorFirst)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.directorLast)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.directorLast)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hireDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hireDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.directorId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

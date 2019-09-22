@@ -1,0 +1,58 @@
+﻿@model js960315_MIS4200.Models.Movie
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Movie</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Actor.firstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Actor.firstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.movieTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.movieTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.movieDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.movieDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.producedBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.producedBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.releaseDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.releaseDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.movieId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
